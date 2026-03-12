@@ -8,10 +8,6 @@ const produtos = [
     {id: 4, item: 'fresa', tipo:'topo',quantida:10},
 ]
 
-app.get('/' ,(req,res) => {
-    res.send("hello world")
-});
-
 app.get('/produtos/:item',(req,res)=> {
     const itemdesejado = req.params.item;
     const item = produtos.find(itemProduto => itemProduto.item === itemdesejado)
